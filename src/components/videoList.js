@@ -2,10 +2,9 @@ angular.module('video-player')
 .component('videoList', {
   // TODO
   bindings: {
-    videoData: '<'
+    videos: '<'
   },
-  controller: () => {
-
+  controller: function($scope) {
   },
   templateUrl: '/src/templates/videoList.html'
 });
