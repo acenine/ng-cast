@@ -1,7 +1,15 @@
 angular.module('video-player')
-
 .component('app', {
-  controller: function($scope){
+  controller: function($scope, youTube){
+
+
+    this.getYouTubeVideos = function (params, callback) {
+      youTube.getYouTubeVideos(params, callback);
+    };
+    this.setVideoData = (videos) => {
+      this.videoData = videos;
+    };
+
     this.videoData = window.exampleVideoData;
     this.currentVideo = this.videoData[0];
     // creates add video function

@@ -1,6 +1,21 @@
 angular.module('video-player')
 
 .component('search', {
-  // TODO
+  bindings: {
+    youtubeVideos: '<',
+    callback: '<'
+  },
+  controller: function($scope) {
+    this.query = '';
+    this.params = {
+      key: window.YOUTUBE_API_KEY,
+      maxResults: 5,
+      query: this.query
+    };
+    this.clearField = () => {
+      this.query = '';
+    };
+  },
+
   templateUrl: '/src/templates/search.html'
 });
