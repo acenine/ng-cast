@@ -3,7 +3,11 @@ angular.module('video-player')
   //
   bindings: {
     videoEntry: '<',
-    index: '<'
+    index: '<',
+    callback: '<'
+  },
+  controller: function($scope) {
+
   },
   templateUrl: '/src/templates/videoListEntry.html'
 });
