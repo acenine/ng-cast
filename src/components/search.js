@@ -6,7 +6,6 @@ angular.module('video-player')
     callback: '<'
   },
   controller: function($scope) {
-    this.query = '';
     this.params = {
       key: window.YOUTUBE_API_KEY,
       maxResults: 5,
