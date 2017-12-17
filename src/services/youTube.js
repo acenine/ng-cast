@@ -14,7 +14,7 @@ angular.module('video-player')
     }).then(function successCallback(response) {
     // this callback will be called asynchronously
     // when the response is available
-      console.log('Stuff got gawt :D ', response.data.items);
+      console.log('Stuff got gawt :D ', response);
       callback(response.data.items);
     }, function errorCallback(response) {
     // called asynchronously if an error occurs

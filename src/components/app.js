@@ -12,6 +12,7 @@ angular.module('video-player')
     };
     this.setVideoData = (videos) => {
       this.videoData = videos;
+      this.currentVideo = this.videoData[0];
     };
     // creates add video function
     this.getVideo = (index) => {
