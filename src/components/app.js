@@ -1,9 +1,6 @@
 angular.module('video-player')
 .component('app', {
   controller: function($scope, youTube) {
-
-
-
     this.videoData = window.exampleVideoData;
     this.currentVideo = this.videoData[0];
 
@@ -14,11 +11,9 @@ angular.module('video-player')
       this.videoData = videos;
       this.currentVideo = this.videoData[0];
     };
-    // creates add video function
     this.getVideo = (index) => {
       this.currentVideo = this.videoData[index];
     };
-    // transfer the video info based on the index to the video player
     this.getYouTubeVideos({
       key: window.YOUTUBE_API_KEY,
       maxResults: 5,
@@ -26,5 +21,4 @@ angular.module('video-player')
     }, this.setVideoData);
   },
   templateUrl: '/src/templates/app.html'
-  // TODO
 });

@@ -1,10 +1,6 @@
 <div class="search-bar form-inline">
-  <input class="form-control" type="text" ng-model="$ctrl.query"/>
-  <button class="btn" ng-click="$ctrl.youtubeVideos({
-      key: $ctrl.key,
-      maxResults: 5,
-      query: $ctrl.query
-    }, $ctrl.callback); $ctrl.clearField()">
+  <input class="form-control" type="text" ng-model="$ctrl.query" ng-keyup="$event.keyCode == 13 && $ctrl.getInfo()"/>
+  <button class="btn" ng-click="$ctrl.getInfo(); $ctrl.clearField()">
     <span class="glyphicon glyphicon-search"></span>
   </button>
 </div>
