@@ -19,7 +19,11 @@ angular.module('video-player')
       this.currentVideo = this.videoData[index];
     };
     // transfer the video info based on the index to the video player
-
+    this.getYouTubeVideos({
+      key: window.YOUTUBE_API_KEY,
+      maxResults: 5,
+      query: 'supercat'
+    }, this.setVideoData);
   },
   templateUrl: '/src/templates/app.html'
   // TODO
